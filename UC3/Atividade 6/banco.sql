@@ -74,3 +74,83 @@ INSERT INTO clientes (nome, email) VALUES
 ("Horácio Gael", "horagael@gmail.com"),
 ("Valmir Glória", NULL),
 ("Laurinda Gregório", "gregorioorio@gmail.com");
+
+INSERT INTO pedidos (descricao, valor, id_cliente) VALUES
+("Lorem ipsum dolor sit amet consectetur adipiscing elit", , ),
+("Donec hendrerit diam ut arcu tincidunt sodales", , ),
+("Ut aliquam accumsan arcu, at pulvinar nisi luctus id", , ),
+("Sed non tortor eget felis rhoncus vestibulum ut ut orci", , ),
+("Sed pharetra metus eu pharetra congue", , ),
+("Phasellus condimentum, diam at elementum bibendum, metus libero imperdiet nisi, sed vulputate elit ante vitae ante", , ),
+("Nunc aliquet accumsan libero ut efficitur", , ),
+("Cras magna arcu, iaculis vitae mattis id, condimentum ut nulla", , );
+
+INSERT INTO funcionarios (nome, salario, id_depto) VALUES
+("Nelson Víctor", 3400, 999);
+
+-- Não foi possivel adicionar o funcionario
+
+SELECT * FROM funcionarios;
+
+SELECT nome, salario FROM funcionarios;
+
+SELECT * FROM alunos WHERE cidade = "Pelotas";
+
+SELECT * FROM funcionarios WHERE salario > 3000;
+
+SELECT * FROM funcionarios ORDER BY nome ASC;
+
+SELECT * FROM funcionarios ORDER BY salario DESC;
+
+SELECT * FROM alunos LIMIT 3;
+
+SELECT nome AS nome_do_aluno, nota AS media_final FROM alunos;
+
+SELECT a.nome, a.nota FROM alunos AS a;
+
+SELECT funcionarios.nome, departamentos.nome_depto
+FROM funcionarios
+INNER JOIN departamentos
+ON funcionarios.id_depto = departamentos.id_depto;
+
+SELECT f.nome, d.nome_depto 
+FROM funcionarios AS f 
+INNER JOIN departamentos AS d
+ON f.id_depto = d.id_depto;
+
+SELECT alunos.nome, cursos.nome_curso
+FROM alunos
+INNER JOIN cursos
+ON alunos.id_curso = cursos.id_curso;
+
+SELECT alunos.nome, cursos.nome_curso
+FROM alunos
+INNER JOIN cursos
+ON alunos.id_curso = cursos.id_curso WHERE alunos.nota > 7;
+
+SELECT clientes.nome, pedidos.descricao
+FROM clientes
+INNER JOIN pedidos
+ON clientes.id_cliente = pedidos.id_cliente;
+
+SELECT alunos.nome, cursos.nome_curso
+FROM alunos
+LEFT JOIN cursos
+ON alunos.id_curso = cursos.id_curso;
+
+SELECT funcionarios.nome, departamentos.nome_depto
+FROM funcionarios
+LEFT JOIN departamentos
+ON funcionarios.id_depto = departamentos.id_depto;
+
+SELECT alunos.nome, cursos.nome_curso
+FROM alunos
+LEFT JOIN cursos
+ON alunos.id_curso = cursos.id_curso ORDER BY alunos.nome ASC;
+
+SELECT aluno.nome, curso.nome_curso, aluno.nota
+FROM alunos AS aluno
+INNER JOIN cursos AS curso
+ON aluno.id_curso = curso.id_curso WHERE nota > 7 ORDER BY nota DESC LIMIT 5;
+
+SELECT cliente.nome, produto.
