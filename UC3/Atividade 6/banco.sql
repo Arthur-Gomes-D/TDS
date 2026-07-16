@@ -76,14 +76,14 @@ INSERT INTO clientes (nome, email) VALUES
 ("Laurinda Gregório", "gregorioorio@gmail.com");
 
 INSERT INTO pedidos (descricao, valor, id_cliente) VALUES
-("Lorem ipsum dolor sit amet consectetur adipiscing elit", , ),
-("Donec hendrerit diam ut arcu tincidunt sodales", , ),
-("Ut aliquam accumsan arcu, at pulvinar nisi luctus id", , ),
-("Sed non tortor eget felis rhoncus vestibulum ut ut orci", , ),
-("Sed pharetra metus eu pharetra congue", , ),
-("Phasellus condimentum, diam at elementum bibendum, metus libero imperdiet nisi, sed vulputate elit ante vitae ante", , ),
-("Nunc aliquet accumsan libero ut efficitur", , ),
-("Cras magna arcu, iaculis vitae mattis id, condimentum ut nulla", , );
+("Lorem ipsum dolor sit amet consectetur adipiscing elit",63, 1),
+("Donec hendrerit diam ut arcu tincidunt sodales", 10, 2),
+("Ut aliquam accumsan arcu, at pulvinar nisi luctus id", 3599, 4),
+("Sed non tortor eget felis rhoncus vestibulum ut ut orci", 1044, 3),
+("Sed pharetra metus eu pharetra congue", 2701, 4),
+("Phasellus condimentum, diam at elementum bibendum, metus libero imperdiet nisi, sed vulputate elit ante vitae ante", 3183, 1),
+("Nunc aliquet accumsan libero ut efficitur", 2056, 2),
+("Cras magna arcu, iaculis vitae mattis id, condimentum ut nulla", 9184, 3);
 
 INSERT INTO funcionarios (nome, salario, id_depto) VALUES
 ("Nelson Víctor", 3400, 999);
@@ -153,4 +153,22 @@ FROM alunos AS aluno
 INNER JOIN cursos AS curso
 ON aluno.id_curso = curso.id_curso WHERE nota > 7 ORDER BY nota DESC LIMIT 5;
 
-SELECT cliente.nome, produto
+SELECT cliente.nome, produto.descricao, produto.valor
+FROM clientes AS cliente
+INNER JOIN pedidos AS produto
+ON cliente.id_cliente = produto.id_cliente WHERE produto.valor > 100 ORDER BY produto.valor ASC;
+
+SELECT * FROM pedidos WHERE id_cliente = 1;
+
+DELETE FROM clientes WHERE id_cliente = 1;
+
+SELECT * FROM pedidos;
+
+SELECT * FROM alunos WHERE id_curso = 1;
+
+DELETE FROM cursos WHERE id_curso = 1;
+
+SELECT * FROM aluno;
+
+-- os alunos que possuiam o curso de ID agora tem o id_curso como NULL
+
