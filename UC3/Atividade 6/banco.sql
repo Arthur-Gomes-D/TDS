@@ -153,4 +153,4 @@ FROM alunos AS aluno
 INNER JOIN cursos AS curso
 ON aluno.id_curso = curso.id_curso WHERE nota > 7 ORDER BY nota DESC LIMIT 5;
 
-SELECT cliente.nome, produto.
+SELECT cliente.nome, produto
