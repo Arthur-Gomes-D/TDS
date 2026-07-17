@@ -172,3 +172,96 @@ SELECT * FROM alunos;
 
 -- os alunos que possuiam o curso de ID agora tem o id_curso como NULL
 
+UPDATE cursos SET id_curso = 20 WHERE id_curso = 2;
+SELECT * FROM alunos;
+
+-- parte 9
+
+-- 36
+
+CREATE TABLE projetos (
+    id_projeto INT PRIMARY KEY AUTO_INCREMENT,
+    nome_projeto VARCHAR(100),
+    id_func INT
+);
+
+ALTER TABLE projetos MODIFY COLUMN id_func INT,
+ADD CONSTRAINT func_tem_projetos
+FOREIGN KEY (id_func) REFERENCES funcionarios(id_func);
+
+-- 37
+
+CREATE TABLE dependentes (
+    id_dep INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    id_func INT
+);
+ALTER TABLE dependentes MODIFY COLUMN id_func INT,
+ADD CONSTRAINT dependentes_tem_func
+FOREIGN KEY (id_func) REFERENCES funcionarios(id_func)
+ON DELETE CASCADE;
+
+-- parte 10
+
+-- 38
+
+SHOW CREATE TABLE alunos;
+
+-- 39
+
+SELECT TABLE_NAME, COLUMN_NAME
+FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+WHERE TABLE_SCHEMA = "lista_banco_relacional";
+
+-- 40
+
+SHOW CREATE TABLE funcionarios;
+
+-- o nome é `1`
+
+ALTER TABLE funcionarios DROP FOREIGN KEY `1`;
+
+-- Desafio Final
+
+CREATE TABLE autor (
+    id_autor INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100)
+);
+
+CREATE TABLE livros (
+    id_livro INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(150),
+    ano INT,
+    id_autor INT,
+    CONSTRAINT autor_escreve_livro FOREIGN KEY (id_autor) REFERENCES autor(id_autor) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO autor (nome) VALUES
+("Alexander Vovin"),
+("José de Anchieta"),
+("Ferdinand de Saussure"),
+("L. L. Zamenhof");
+
+INSERT INTO livros (titulo, ano, id_autor) VALUES
+("A Descriptive and Comparative Grammar of Western Old Japanese", 2004, 1),
+("Man'yōshū — Book 1", 2009, 1),
+("Arte de Gramática da Língua Mais Usada na Costa do Brasil", 1595, 2),
+("Unua Libro", 1888, 4),
+("Dua Libro", 1888, 4),
+("Curso de Linguística Geral", 1916, 3);
+
+SELECT autor.nome, livros.titulo
+FROM autor
+INNER JOIN livros
+ON autor.id_autor = livros.id_autor;
+
+SELECT livros.titulo, autor.nome
+FROM livros
+LEFT JOIN autor
+ON livros.id_autor = autor.id_autor;
+
+DELETE FROM autor WHERE id_autor = 4;
+
+-- {print}
+
+SELECT * FROM livros ORDER BY ano DESC LIMIT 3;
