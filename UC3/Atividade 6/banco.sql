@@ -168,7 +168,7 @@ SELECT * FROM alunos WHERE id_curso = 1;
 
 DELETE FROM cursos WHERE id_curso = 1;
 
-SELECT * FROM aluno;
+SELECT * FROM alunos;
 
 -- os alunos que possuiam o curso de ID agora tem o id_curso como NULL
 
