@@ -52,3 +52,15 @@ INSERT INTO lojas (nome_loja, site) VALUES
 ("loja soque do mau", "lojadomau.store"),
 ("loja soque do neutra", "lojaneutra.store"),
 ("loja soque do bem", "lojadobem.store");
+
+INSERT INTO varreduras (preco_encontrado, url_produto, produtos_id, lojas_id) VALUES
+(68.14, "loja.store/temis", 2, 1),
+(450.17, "lojadomau.store/camiseta_maldita", 5, 2),
+(0.17, "lojaneutra.store/tenis", 2, 3),
+(387.84, "lojadomau.store/teclado_desgraçado", 4, 2),
+(270.74, "lojadobem.store/limao_do_bem", 3, 4),
+(193.17, "lojadobem.store/monitor", 1, 4),
+(84.36, "loja.store/camiseta", 5, 1),
+(321.15, "lojaneutra.store/teclado", 3, 3),
+(82.09, "lojadomau.store/tenis", 2, 2),
+(486.41, "lojadobem.store/monitor", 1, 4);
