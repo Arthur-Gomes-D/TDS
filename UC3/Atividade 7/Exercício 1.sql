@@ -33,4 +33,6 @@ CREATE TABLE oportunidades(
     FOREIGN KEY (id_leads) REFERENCES leads(id) ON DELETE CASCADE
 );
 
+--5
+
 INSERT INTO leads (nome, email, telefone, empresa)
