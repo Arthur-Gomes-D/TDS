@@ -35,4 +35,8 @@ CREATE TABLE oportunidades(
 
 --5
 
-INSERT INTO leads (nome, email, telefone, empresa)
+INSERT INTO leads (nome, email, telefone, empresa) VALUES
+("Enoque Efraim", "enoq98@hotmail.com", "(53) 97227-7554", "Empresa"),
+("Herberto Thaís", "herbeto123@gmail.com", "(53) 91045-6662", "Empresa Neura"),
+("Ivone Adalberto", "ivoneadal21@gmail.com", "(53) 90951-8270", "Empresa ilegal 321"),
+("Janaína Nilo", "nilo213@outlook.com", NULL, "Empresa legal 123");
