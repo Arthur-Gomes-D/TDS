@@ -32,3 +32,10 @@ CREATE TABLE varreduras (
     FOREIGN KEY (produtos_id) REFERENCES produtos(id) ON DELETE CASCADE,
     FOREIGN KEY (lojas_id) REFERENCES lojas(id) ON DELETE CASCADE
 );
+
+-- 5
+
+INSERT INTO categorias (nome_categoria) VALUES
+("Roupas"),
+("Eletrônicos"),
+("Produtos alimentícios");
