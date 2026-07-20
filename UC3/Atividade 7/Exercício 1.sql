@@ -48,3 +48,10 @@ INSERT INTO interacoes (descricao, tipo, id_leads) VALUES
 ("Conubia nostra inceptos himenaeos orci varius natoque penatibus", 2, 4),
 ("Nulla molestie mattis scelerisque maximus eget fermentum odio", 3, 1),
 ("Blandit quis suspendisse aliquet nisi sodales consequat magna", 4, 2);
+
+INSERT INTO oportunidades (produto_interesse, valor_previsto, status, data_criacao, id_leads) VALUES
+("mus", 394.55, 1, (CURRENT_DATE()), 3),
+("iaculis", 586.15, 2, "2026-07-27", 4),
+("rhoncus", 490.99, 3, "2026-12-22", 1),
+("lobortis", 456.84, 2, "2026-11-11", 2),
+("platea", 660.80, 2, (CURRENT_DATE()), 3);
