@@ -39,3 +39,10 @@ INSERT INTO categorias (nome_categoria) VALUES
 ("Roupas"),
 ("Eletrônicos"),
 ("Produtos alimentícios");
+
+INSERT INTO produtos (nome_produto, codigo_ean, preco_desejado, categorias_id) VALUES
+("Monitor", "4898981600704", 254.20, 2),
+("Tenis", "5627696853163", 148.46, 1),
+("Limão", "3493954093544", 28.10, 3),
+("Teclado", "5814662541122", 163.76, 2),
+("Camiseta", "5915186528641", 118.62, 1);
