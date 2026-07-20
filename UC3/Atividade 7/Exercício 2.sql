@@ -46,3 +46,9 @@ INSERT INTO produtos (nome_produto, codigo_ean, preco_desejado, categorias_id) V
 ("Limão", "3493954093544", 28.10, 3),
 ("Teclado", "5814662541122", 163.76, 2),
 ("Camiseta", "5915186528641", 118.62, 1);
+
+INSERT INTO lojas (nome_loja, site) VALUES
+("loja", "loja.store"),
+("loja soque do mau", "lojadomau.store"),
+("loja soque do neutra", "lojaneutra.store"),
+("loja soque do bem", "lojadobem.store");
