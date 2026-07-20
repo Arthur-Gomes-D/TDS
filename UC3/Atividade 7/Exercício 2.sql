@@ -12,3 +12,12 @@ CREATE TABLE categorias (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome_categoria VARCHAR(50) NOT NULL
 );
+
+CREATE TABLE produtos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome_produto VARCHAR(100) NOT NULL,
+    codigo_ean VARCHAR(15) NOT NULL,
+    preco_desejado DECIMAL(10,2) NOT NULL,
+    categorias_id INT,
+    FOREIGN KEY (categorias_id) REFERENCES categorias(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
