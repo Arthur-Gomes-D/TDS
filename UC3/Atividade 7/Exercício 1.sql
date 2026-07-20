@@ -40,3 +40,11 @@ INSERT INTO leads (nome, email, telefone, empresa) VALUES
 ("Herberto Thaís", "herbeto123@gmail.com", "(53) 91045-6662", "Empresa Neura"),
 ("Ivone Adalberto", "ivoneadal21@gmail.com", "(53) 90951-8270", "Empresa ilegal 321"),
 ("Janaína Nilo", "nilo213@outlook.com", NULL, "Empresa legal 123");
+
+INSERT INTO interacoes (descricao, tipo, id_leads) VALUES 
+("Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus.", 1, 2),
+("Pretium tellus duis convallis tempus leo eu aenean", 2, 3),
+("Iaculis massa nisl malesuada lacinia integer nunc posuere", 2, 2),
+("Conubia nostra inceptos himenaeos orci varius natoque penatibus", 2, 4),
+("Nulla molestie mattis scelerisque maximus eget fermentum odio", 3, 1),
+("Blandit quis suspendisse aliquet nisi sodales consequat magna", 4, 2);
