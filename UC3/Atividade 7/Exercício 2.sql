@@ -21,3 +21,14 @@ CREATE TABLE produtos (
     categorias_id INT,
     FOREIGN KEY (categorias_id) REFERENCES categorias(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE TABLE varreduras (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    data_varedura DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    preco_encontrado DECIMAL(10,2),
+    url_produto VARCHAR(200),
+    produtos_id INT,
+    lojas_id INT,
+    FOREIGN KEY (produtos_id) REFERENCES produtos(id) ON DELETE CASCADE,
+    FOREIGN KEY (lojas_id) REFERENCES lojas(id) ON DELETE CASCADE
+);
