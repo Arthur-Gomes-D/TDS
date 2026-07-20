@@ -17,8 +17,8 @@ CREATE TABLE leads(
 CREATE TABLE interacoes(
     id INT PRIMARY KEY AUTO_INCREMENT,
     descricao VARCHAR(100) NOT NULL,
-    data_intecao DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    tipo VARCHAR(45),
+    data_interacao DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    tipo INT,
     id_leads INT,
     FOREIGN KEY (id_leads) REFERENCES leads(id) ON DELETE CASCADE
 );
