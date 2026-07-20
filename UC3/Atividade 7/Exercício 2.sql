@@ -7,3 +7,8 @@ CREATE TABLE lojas (
     nome_loja VARCHAR(100) NOT NULL,
     site VARCHAR(150)
 );
+
+CREATE TABLE categorias (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome_categoria VARCHAR(50) NOT NULL
+);
