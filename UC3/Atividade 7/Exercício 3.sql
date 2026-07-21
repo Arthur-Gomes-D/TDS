@@ -15,8 +15,9 @@ CREATE TABLE funcionarios (
     FOREIGN KEY (departamentos_id) REFERENCES departamentos(id)
 );
 
-CREATE TABLE vendas (
+CREATE TABLE clientes (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    data_venda DATETIME DEFAULT CURRENT_TIMESTAMP,
-    
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(25)
 );
