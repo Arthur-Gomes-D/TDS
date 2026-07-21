@@ -31,3 +31,10 @@ CREATE TABLE vendas (
     funcionarios_id INT,
     FOREIGN KEY (funcionarios_id) REFERENCES funcionarios(id)
 );
+
+CREATE TABLE fornecedores (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome_fornceores VARCHAR(100) NOT NULL,
+    cnpj VARCHAR(15) NOT NULL,
+    telefone VARCHAR(20)
+);
