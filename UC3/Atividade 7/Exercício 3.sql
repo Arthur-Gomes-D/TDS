@@ -38,3 +38,12 @@ CREATE TABLE fornecedores (
     cnpj VARCHAR(15) NOT NULL,
     telefone VARCHAR(20)
 );
+
+CREATE TABLE produtos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome_produto VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    estoque INT NOT NULL,
+    fornecedores_id INT,
+    FOREIGN KEY (fornecedores_id) REFERENCES fornecedores(id)
+);
