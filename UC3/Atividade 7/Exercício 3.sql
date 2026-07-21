@@ -21,3 +21,13 @@ CREATE TABLE clientes (
     email VARCHAR(100) NOT NULL,
     telefone VARCHAR(25)
 );
+
+CREATE TABLE vendas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    data_venda DATETIME DEFAULT CURRENT_TIMESTAMP,
+    valor_total DECIMAL (10,2),
+    clientes_id INT,
+    FOREIGN KEY (clientes_id) REFERENCES clientes(id),
+    funcionarios_id INT,
+    FOREIGN KEY (funcionarios_id) REFERENCES funcionarios(id)
+);
