@@ -62,3 +62,10 @@ INSERT INTO departamentos (nome_departamento) VALUES
 ("Tecnologia da Informação"),
 ("Financeiro"),
 ("Recursos Humanos");
+
+INSERT INTO funcionarios(nome, cargo, salario, departamentos_id) VALUES
+("Ana Paula Souza", "Analista de RH", 4800.00, 3),
+("Carlos Henrique Lima", "Assistente de RH", 3200.00, 3),
+("Fernanda Oliveira", "Analista Financeiro", 5500.00, 2),
+("Rafael Costa", "Desenvolvedor Full Stack", 8200.00, 1),
+("Juliana Martins", "Suporte Técnico", 3900.00, 1);
