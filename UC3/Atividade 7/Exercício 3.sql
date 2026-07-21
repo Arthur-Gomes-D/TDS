@@ -74,3 +74,11 @@ INSERT INTO fornecedores(nome_fornceores, cnpj, telefone) VALUES
 ("Distribuidora Alfa Ltda.", "12.345.678/0001-90", "(11) 98765-4321"),
 ("Comercial Horizonte Ltda.", "23.456.789/0001-15", "(21) 99876-5432"),
 ("Tech Supply Comércio Ltda.", "34.567.890/0001-42", "(31) 99123-4567");
+
+INSERT INTO produtos (nome_produto, preco, estoque, fornecedores_id) VALUES
+("Notebook Dell Inspiron 15", 4299.90, 15, 3),
+("Mouse Sem Fio Logitech M170", 89.90, 80, 3),
+("Papel Sulfite A4 (500 folhas)", 29.90, 200, 1),
+("Cadeira Ergonômica Office", 899.90, 25, 2),
+('Monitor LED 24" Full HD', 1049.90, 30, 3),
+("Caneta Esferográfica Azul (Caixa c/50)", 54.90, 120, 1);
