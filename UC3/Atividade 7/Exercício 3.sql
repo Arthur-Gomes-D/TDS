@@ -35,7 +35,7 @@ CREATE TABLE vendas (
 CREATE TABLE fornecedores (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome_fornceores VARCHAR(100) NOT NULL,
-    cnpj VARCHAR(15) NOT NULL,
+    cnpj VARCHAR(20) NOT NULL,
     telefone VARCHAR(20)
 );
 
