@@ -82,3 +82,9 @@ INSERT INTO produtos (nome_produto, preco, estoque, fornecedores_id) VALUES
 ("Cadeira Ergonômica Office", 899.90, 25, 2),
 ('Monitor LED 24" Full HD', 1049.90, 30, 3),
 ("Caneta Esferográfica Azul (Caixa c/50)", 54.90, 120, 1);
+
+INSERT INTO clientes (nome, email, telefone) VALUES
+("Mariana Alves", "mariana.alves@email.com", "(11) 99812-3456"),
+("Lucas Ferreira", "lucas.ferreira@email.com", "(21) 99745-6789"),
+("Beatriz Santos", "beatriz.santos@email.com", "(31) 99678-1234"),
+("Gabriel Oliveira", "gabriel.oliveira@email.com", "(41) 99567-8901");
