@@ -47,3 +47,13 @@ CREATE TABLE produtos (
     fornecedores_id INT,
     FOREIGN KEY (fornecedores_id) REFERENCES fornecedores(id)
 );
+
+CREATE TABLE itens_vendas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    quantidade INT NOT NULL,
+    proco_unitario DECIMAL(10,2),
+    produtos_id INT,
+    FOREIGN KEY (produtos_id) REFERENCES produtos(id),
+    vendas_id INT,
+    FOREIGN KEY (vendas_id) REFERENCES vendas(id)
+);
