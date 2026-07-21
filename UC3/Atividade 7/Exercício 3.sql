@@ -57,3 +57,8 @@ CREATE TABLE itens_vendas (
     vendas_id INT,
     FOREIGN KEY (vendas_id) REFERENCES vendas(id) ON DELETE CASCADE
 );
+
+INSERT INTO departamentos (nome_departamento) VALUES 
+("Tecnologia da Informação"),
+("Financeiro"),
+("Recursos Humanos");
