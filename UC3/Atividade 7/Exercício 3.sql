@@ -69,3 +69,8 @@ INSERT INTO funcionarios(nome, cargo, salario, departamentos_id) VALUES
 ("Fernanda Oliveira", "Analista Financeiro", 5500.00, 2),
 ("Rafael Costa", "Desenvolvedor Full Stack", 8200.00, 1),
 ("Juliana Martins", "Suporte Técnico", 3900.00, 1);
+
+INSERT INTO fornecedores(nome_fornceores, cnpj, telefone) VALUES
+("Distribuidora Alfa Ltda.", "12.345.678/0001-90", "(11) 98765-4321"),
+("Comercial Horizonte Ltda.", "23.456.789/0001-15", "(21) 99876-5432"),
+("Tech Supply Comércio Ltda.", "34.567.890/0001-42", "(31) 99123-4567");
