@@ -95,3 +95,15 @@ INSERT INTO vendas (valor_total, clientes_id, funcionarios_id) VALUES
 (29.90, 2, 3),
 (1049.90, 3, 5),
 (899.90, 4, 1);
+
+INSERT INTO itens_vendas (quantidade, proco_unitario, produtos_id, vendas_id) VALUES
+(1, 4299.90, 1, 1),
+(1, 89.90, 2, 2),
+(1, 29.90, 3, 3),
+(1, 1049.90, 4, 4),
+(1, 899.90, 5, 5),
+(1, 4299.90, 1, 1),
+(1, 89.90, 2, 2),
+(1, 29.90, 3, 3),
+(1, 1049.90, 4, 4),
+(1, 899.90, 5, 5);
