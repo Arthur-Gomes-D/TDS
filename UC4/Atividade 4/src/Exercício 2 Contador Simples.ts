@@ -4,13 +4,13 @@ class Contador{
         this.num = 0
     }
 
-    incrementar(){
+    public incrementar():void{
         this.num += 1
     }
-    decremntar(){
+    public decremntar():void{
         this.num -= 1
     }
-    getValor(){
+    public getValor():number{
         return this.num
     }
 }
