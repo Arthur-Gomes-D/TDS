@@ -17,8 +17,23 @@ class Lampada {
 
 let lamdapa = new Lampada()
 
-console.log(lamdapa.isLigado());
+if (lamdapa.isLigado()) {
+    console.log("Lampada está ligada");
+}else{
+    console.log("Lampada está desligada");
+    
+}
 lamdapa.ligar()
-console.log(lamdapa.isLigado());
+if (lamdapa.isLigado()) {
+    console.log("Lampada está ligada");
+}else{
+    console.log("Lampada está desligada");
+    
+}
 lamdapa.desligar()
-console.log(lamdapa.isLigado());
+if (lamdapa.isLigado()) {
+    console.log("Lampada está ligada");
+}else{
+    console.log("Lampada está desligada");
+    
+}
