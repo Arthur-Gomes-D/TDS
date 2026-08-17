@@ -4,13 +4,13 @@ class Lampada {
         this.ligada = false
     }
 
-    ligar(){
+    public ligar():void{
         this.ligada = true
     }
-    desligar(){
+    public desligar():void{
         this.ligada = false
     }
-    isLigado(){
+    public isLigado():boolean{
         return this.ligada
     }
 }
