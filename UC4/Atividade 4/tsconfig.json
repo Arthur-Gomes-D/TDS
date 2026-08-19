@@ -1,12 +1,12 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
+
   "compilerOptions": {
-    // File Layout
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "module": "nodenext",
-    "target": "es2016",
-    "strict": true,
-    "removeComments": true
+
+    "rootDir": "./src", //Onde ficam os arquivos Typescript
+    "outDir": "./dist", //Onde serão gerados os arquivos JavaScript 
+    "module": "nodenext", //Sistema de módulos utilizados
+    "target": "esnext", //Versão do javaScript gerado
+    "strict": true, //Ativa verificações rigorosas de tipos 
+    //"removeComments": true //Remove os comentários do JavaScript gerado
   }
 }
