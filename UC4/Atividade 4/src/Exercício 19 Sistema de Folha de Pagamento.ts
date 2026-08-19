@@ -43,6 +43,9 @@ class Funcionario {
     }
 }
 let joaoTesta = new Funcionario("João Testa", 2500, 50)
+let joaoTesta1 = new Funcionario("João Testa1", 2800, 50)
+let joaoTesta2 = new Funcionario("João Testa2", 3200, 50)
+
 class FolhaPagamento {
     private funcionarios:Funcionario[]
     constructor(){
@@ -50,6 +53,20 @@ class FolhaPagamento {
     }
     
     public adicionarFuncionarios(funcionario:Funcionario):void{
-        this.funcionarios
+        this.funcionarios.push(funcionario)
+    }
+    public calcularCustoTotal():number{
+        let total:number = 0
+        for (const funcionario of this.funcionarios) {
+            total += funcionario.getSalarioLiquido()
+        }
+        return total
     }
 }
+let folhaPagamento = new FolhaPagamento()
+
+folhaPagamento.adicionarFuncionarios(joaoTesta)
+folhaPagamento.adicionarFuncionarios(joaoTesta1)
+folhaPagamento.adicionarFuncionarios(joaoTesta2)
+
+console.log(folhaPagamento.calcularCustoTotal());
