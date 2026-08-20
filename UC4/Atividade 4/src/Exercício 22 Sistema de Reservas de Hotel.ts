@@ -1,31 +1,35 @@
 class Quarto {
-    public numero:number
-    public precoDiaria:number
-    public reserva:boolean
-    constructor(numero:number, precoDiaria:number, reserva:boolean){
+    public numero: number
+    public precoDiaria: number
+    public reserva: boolean
+    constructor(numero: number, precoDiaria: number, reserva: boolean) {
         this.numero = numero
         this.precoDiaria = precoDiaria
         this.reserva = reserva
     }
 }
 class Hotel {
-    private quartos:Quarto[]
-    constructor(){
+    private quartos: Quarto[]
+    constructor() {
         this.quartos = []
     }
-    public cadastrarQuatro(quarto:Quarto):void{
+    public cadastrarQuatro(quarto: Quarto): void {
         this.quartos.push(quarto)
         console.log("quarto número registrado");
-        
+
     }
-    public reservarQuatro(numero:number, dias:number){
-        for (const quatro of this.quartos) {
-            if (quatro.numero == numero && !quatro.reserva) {
-                quatro.reserva = true
-                console.log(`O quarto de número ${numero} está disponivel!`);
-                console.log(`sua diaria será de ${quatro.precoDiaria * dias} R$`);
-            }else{
-                console.log("quarto não encontrado ou quarto já reservado");
+    public reservarQuatro(numero: number, dias: number) {
+        const quarto = this.quartos.find((quart) => quart.numero == numero)
+        if (quarto == undefined) {
+            console.log("Quarto não encontrado");
+
+        } else {
+            if (quarto.reserva == false){
+                console.log(`o quarto número ${quarto.numero} está disponivel e sua diaria será de ${quarto.precoDiaria * dias}`);
+                quarto.reserva = true
+            } else {
+                console.log(`o quarto de número ${quarto.numero} já está reservado`);
+                
             }
         }
     }
@@ -38,3 +42,6 @@ meuHotel.cadastrarQuatro(quartos[2])
 meuHotel.reservarQuatro(1, 10)
 meuHotel.reservarQuatro(2, 10)
 meuHotel.reservarQuatro(32, 10)
+
+meuHotel.reservarQuatro(32, 10)
+meuHotel.reservarQuatro(31, 10)
