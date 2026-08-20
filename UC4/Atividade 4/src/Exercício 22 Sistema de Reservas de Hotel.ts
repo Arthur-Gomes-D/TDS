@@ -1,19 +1,19 @@
 class Quarto {
-    public numero: number
-    public precoDiaria: number
-    public reserva: boolean
-    constructor(numero: number, precoDiaria: number, reserva: boolean) {
+    public numero:  number
+    public precoDiaria:  number
+    public reserva:  boolean
+    constructor(numero:  number, precoDiaria:  number, reserva:  boolean)  {
         this.numero = numero
         this.precoDiaria = precoDiaria
         this.reserva = reserva
     }
 }
 class Hotel {
-    private quartos: Quarto[]
-    constructor() {
+    private quartos:  Quarto[]
+    constructor()  {
         this.quartos = []
     }
-    public cadastrarQuatro(quarto: Quarto): void {
+    public cadastrarQuatro(quarto:  Quarto):  void  {
         this.quartos.push(quarto)
         console.log("quarto número registrado");
 
