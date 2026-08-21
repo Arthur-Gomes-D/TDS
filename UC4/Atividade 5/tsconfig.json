@@ -1,0 +1,12 @@
+{
+
+  "compilerOptions": {
+
+    "rootDir": "./src", //Onde ficam os arquivos Typescript
+    "outDir": "./dist", //Onde serão gerados os arquivos JavaScript 
+    "module": "nodenext", //Sistema de módulos utilizados
+    "target": "esnext", //Versão do javaScript gerado
+    "strict": true, //Ativa verificações rigorosas de tipos 
+    //"removeComments": true //Remove os comentários do JavaScript gerado
+  }
+}
