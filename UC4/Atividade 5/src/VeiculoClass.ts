@@ -1,4 +1,4 @@
-class Veiculo {
+export class Veiculo {
     public marca:string
     public modelo:string
     private _velocidade:number
@@ -14,8 +14,7 @@ class Veiculo {
         return this._velocidade
     }
 }
-
-class Moto extends Veiculo{
+export class Moto extends Veiculo{
     private _cilindradas:number
     constructor(marca:string, modelo:string, cilindradas:number) {
         super(marca, modelo, 0)
@@ -30,7 +29,3 @@ class Moto extends Veiculo{
         }
     }
 }
-const moto = new Moto("HJFS", "nnj32", 25)
-moto.empinar()
-moto.acelerar(30)
-moto.empinar()
