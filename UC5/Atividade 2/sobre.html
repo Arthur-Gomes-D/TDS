@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mim - Arthur Gomes D.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="titulo">
+        <h1>Sobre mim - Arthur Gomes D.</h1>
+    </section>
+    <hr>
+    <section class="areaGeral">
+        <div>
+            <h2>Quem sou eu?</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod magnam, excepturi voluptate sapiente fuga
+                nam quasi molestiae maxime dolorum voluptas debitis impedit non mollitia ex tempore natus, expedita,
+                veniam sint!</p>
+        </div>
+        <div>
+            <h2>Conhcimentos e Objetivos</h2>
+            <h3>Conhcimentos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe labore odit consequatur earum rerum
+                necessitatibus laborum ab vitae quibusdam. Quidem dolorem consequatur molestias nihil omnis laborum
+                incidunt repellendus tempora ab.</p>
+            <h3>Objetivos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, voluptas tempora. Eum at in doloremque,
+                numquam exercitationem sunt sint provident dolor excepturi distinctio, quo optio veniam. Quam voluptatem
+                officia modi!</p>
+        </div>
+        <div style="display: none;">
+            <h2>Lista de definições</h2>
+        </div>
+        <div>
+            <h2>Codigo</h2>
+            <div class="codigo">
+                <h4>JavaScript</h4>
+                <code>
+                <pre>
+const prompt = require("prompt-sync")();
+
+
+let a = +prompt("Escreva o A: ")
+let b = +prompt("Escreva o B: ")
+let c = +prompt("Escreva o C: ")
+
+console.log("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+let delta = b**2 - 4 * a * c 
+
+if(isNaN(delta)){
+    console.log("Verifique os valores inseridos");
+
+}else if (delta &lt; 0) {
+    console.log(`Delta: ${delta}`);
+    console.log("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+    console.log("Não existe");
+    console.log("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+    
+} else{
+    console.log(`Delta: ${delta}`);
+    b = b - (b*2)
+    
+    let raiz = Math.sqrt(delta)
+
+    let b_mais = b + raiz
+    let b_menos =  b - raiz
+    
+    let bMaSubString = `${b_mais/(2*a)}`
+    let bMiSubString = `${b_menos/(2*a)}`
+
+    console.log(`x1: ${bMaSubString.substring(0,6)}`);
+    console.log(`x2: ${bMiSubString.substring(0,6)}`);
+    console.log("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+</pre>
+            </code>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
