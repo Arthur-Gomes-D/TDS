@@ -3,12 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de alunos</title>
 </head>
 
 <body>
     <h1>Cadastro de alunos</h1>
+    <form id="formulario">
+        <h2 id="tituloFormulario">Novo aluno</h2>
+        <label for="nome">Nome</label>
+        <input id="nome" maxlength="100" required>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" maxlength="150" required>
+        <button id="salvar" type="submit">Cadastrar</button>
+        <button id="cancelar" type="button" hidden>Cancelar Edição</button>
+    </form>
+    <p id="mensagem" role="status"></p>
+    <button id="recarregar" type="button">Atualizar lista</button>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="lista">
+        </tbody>
+    </table>
 </body>
 
 </html>

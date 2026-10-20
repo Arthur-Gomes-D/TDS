@@ -22,6 +22,3 @@ app.on('activate', () => {  // quando aplicativo estiver tivado
         criarJanela() // executar função criarJanela
     }
 })
-setTimeout(() => {
-    console.log(BrowserWindow.getAllWindows().length);
-}, 1000)
