@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self';
+        style-src 'self'; object-src 'none'; base-uri 'none'">
+    <title>login</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="login.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <p class="subtitulo">ELECTRON + MYSQL</p>
+            <h1>Sistema acadêmico</h1>
+        </header>
+        <form id="formLogin">
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" name="usuario" maxlength="100" autocomplete="username" required="required"
+                autofocus="autofocus">
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" maxlength="128" autocomplete="current-password" required>
+
+            <div class="acoes">
+                <button id="entrar" type="submit">Entrar</button>
+            </div>
+
+            <p id="mensagemLogin" role="status" aria-live="polite">
+            </p>
+        </form>
+    </main>
+</body>
+
+</html>
