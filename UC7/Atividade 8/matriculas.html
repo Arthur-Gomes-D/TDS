@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'"
+    >
+    <title>Cadastro de Matrículas</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="cadastro.js" defer></script>
+    <script src="matriculas.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <p class="subtitulo">Electron + MYSQL</p>
+            <h1>Cadastro de Matrículas</h1>
+            <div class="acoes navegacao">
+                <button id="voltarMenu" type="button" class="secundaria">Voltar ao menu</button>
+                <button id="sair" type="button" class="secundaria">Sair</button>
+            </div>
+        </header>
+
+        <form id="formulario">
+            <h2 id="tituloFormulario">Nova matrícula</h2>
+            <label for="aluno">Aluno</label>
+            <select id="aluno" name="aluno_id" required>
+                <option value="">Selecione o aluno</option>
+            </select>
+            <label for="curso">Curso</label>
+            <select id="curso" name="curso_id" required>
+                <option value="">Selecione o curso</option>
+            </select>
+
+            <label for="dataMatricula">Data da matrícula</label>
+            <input type="date" id="dataMatricula" name="data_matricula" min="1000-01-01" max="9999-12-31" required>
+
+            <div class="acoes">
+                <button id="salvar" type="submit">Salvar</button>
+                <button id="cancelar" type="button">Cancelar</button>
+            </div>
+        </form>
+        <p id="mensagem" role="status" aria-live="polite"></p>
+        <section aria-labelledby="tituloLista">
+            <div class="cabecalhoLista">
+                <h2 id="tituloLista">Matrículas Cadastradas</h2>
+                <div class="acoesLista">
+                    <button id="recarregar" class="secudanrio" type="button">Atualizar lista</button>
+                </div>
+            </div>
+
+            <table>
+                <caption id="resumo">Carregando registros...</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Aluno</th>
+                        <th scope="col">Curso</th>
+                        <th scope="col">Data de matrícula</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="lista"></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
